@@ -1,4 +1,5 @@
-﻿namespace ShortesPathAlgorithm
+﻿
+namespace ShortesPathAlgorithm
 {
     /*
      * In this example, we define a Graph class with an adjacency list representation. 
@@ -223,7 +224,7 @@
                 visited[i] = false;
             }
 
-            distances[source] = int.MinValue;
+            distances[source] = 0;
 
             for (int count = 0; count < vertices - 1; count++)
             {
