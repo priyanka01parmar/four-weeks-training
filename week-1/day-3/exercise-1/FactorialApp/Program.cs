@@ -1,20 +1,28 @@
-﻿namespace FactorialApp
+﻿using System;
+using System.Diagnostics.Metrics;
+
+using System;
+namespace LogicalPrograms
 {
-    public class Program
+    class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            Console.Write("Enter a number: ");
+            Console.Write("Enter a Number : ");
             int number = int.Parse(Console.ReadLine());
-
-            long factorial = CalculateFactorial(number);
-
-            Console.WriteLine($"The factorial of {number} is: {factorial}");
+            long factorial = fact(number);
+            Console.Write($"Factorial of {number}  is: {factorial}");
+            Console.ReadLine();
         }
-
-        public static long CalculateFactorial(int number)
+        static long fact(int number)
         {
-            throw new NotImplementedException();
+            int factorial = 1;
+            for (int i = 1; i <= number; i++)
+            {
+                factorial = factorial * i;
+            }
+            return factorial;
+
         }
     }
 }
